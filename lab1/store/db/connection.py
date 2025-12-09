@@ -13,7 +13,7 @@ def create_connection_pool():
     # Check if using Cloud SQL unix socket
     if db_host.startswith("/cloudsql/"):
         connection_config = {
-            "unix_socket": db_host,
+            "unix_socket": db_host, 
             "user": os.environ.get("DB_USER", "myuser"),
             "password": os.environ.get("DB_PASSWORD", "mypassword"),
             "database": os.environ.get("DB_NAME", "mydb"),

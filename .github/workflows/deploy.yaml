@@ -26,7 +26,7 @@ jobs:
       
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/store/flask-app:${{ github.sha }} .
+          docker build -t ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/store/flask-app:${{ github.sha }} ./lab1
           docker push ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/store/flask-app:${{ github.sha }}
 
       - name: Deploy to Cloud Run

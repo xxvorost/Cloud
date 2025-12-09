@@ -38,7 +38,7 @@ jobs:
             --allow-unauthenticated \
             --set-secrets=DB_USER=DB_USER:latest,DB_HOST=DB_HOST:latest,DB_NAME=DB_NAME:latest,DB_PASSWORD=DB_PASSWORD:latest,DB_PORT=DB_PORT:latest,IDENTITY_KEY=IDENTITY_KEY:latest \
             --set-env-vars=PROJECT_ID=bold-mantis-480720-d1 \
-            --add-cloudsql-instances=bold-mantis-480720-d1:us-central1:storedb \
+            --add-cloudsql-instances=bold-mantis-480720-d1:europe-west1:storedb \
             --min-instances 0 \
             --max-instances 3 \
             --cpu 1 \

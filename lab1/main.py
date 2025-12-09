@@ -28,20 +28,20 @@ def health_check():
 init_routes(app)
 
 
-@app.before_request
-def global_auth():
-    if request.path.startswith('/apidocs') or request.path.startswith('/static'):
-        return
-    exempt_endpoints = ['user.login_user',
-                        'user.create_user',
-                        'apispec_1',
-                        'apidocs'
-                        ]
-    if request.endpoint in exempt_endpoints:
-        return
-    result = require_auth(lambda: None)()
-    if result is not None:
-        return result
+# @app.before_request
+# def global_auth():
+#     if request.path.startswith('/apidocs') or request.path.startswith('/static'):
+#         return
+#     exempt_endpoints = ['user.login_user',
+#                         'user.create_user',
+#                         'apispec_1',
+#                         'apidocs'
+#                         ]
+#     if request.endpoint in exempt_endpoints:
+#         return
+#     result = require_auth(lambda: None)()
+#     if result is not None:
+#         return result
 
 
 if __name__ == '__main__':

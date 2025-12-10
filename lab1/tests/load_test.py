@@ -6,7 +6,7 @@ import time
 import requests
 from threading import Lock
 
-BASE_URL = os.environ.get("BASE_URL", "https://flask-app-509731619895.europe-west1.run.app")
+BASE_URL = os.environ.get("BASE_URL", "https://flask-app-500585355008.europe-west1.run.app")
 
 print(f"Running load tests against {BASE_URL}")
 
@@ -70,7 +70,7 @@ def continuous_load_worker(token, worker_id, stop_time):
     
     endpoints = [
         ("/users", "GET", None),
-        ("/users/33", "GET", None),
+        ("/users/2", "GET", None),
     ]
     
     while time.time() < stop_time:

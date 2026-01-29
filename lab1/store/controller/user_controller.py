@@ -53,10 +53,10 @@ def update_user(user_id):
     user_service.update_user(user_id, name=username, email=email, password=password)
     return jsonify({'message': 'User updated successfully!'}), 200
 
-@user_bp.route('/users/<int:user_id>', methods=['DELETE'])
-def delete_user(user_id):
-    response, status_code = user_service.delete_user(user_id)
-    return jsonify(response), status_code
+# @user_bp.route('/users/<int:user_id>', methods=['DELETE'])
+# def delete_user(user_id):
+#     response, status_code = user_service.delete_user(user_id)
+#     return jsonify(response), status_code
 
 @user_bp.route('/users/<int:user_id>/courses', methods=['GET'])
 def get_user_courses(user_id):
